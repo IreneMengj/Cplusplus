@@ -7,9 +7,18 @@ int * func()
     return p;
 }
 
+void test(){
+    int * arr = new int[10];
+    for(int i=0;i<10;i++){
+        arr[i]=i+100;
+        cout<<arr[i]<<endl;
+    }
+    delete [] arr;
+}
+
 int main(){
     int *p = func();
     cout<<*p<<endl;
     delete p;
-    cout<<*p<<endl;
+    test();
 }
